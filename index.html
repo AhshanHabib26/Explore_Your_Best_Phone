@@ -32,12 +32,26 @@
           </div>
     </header>
     <main class="my-5">
+
         <!-- Search Area -->
         <section class="search_sec container">
             <div class="d-flex w-75 mx-auto">
                 <input id="input_area" class="form-control me-2" type="search" placeholder="Search Phone By Name" aria-label="Search">
                 <button onclick="inputBtn()" class="btn btn-outline-success" type="submit">Search</button>
               </div>
+        </section>
+
+        <!-- Spinner UI Show  -->
+        <section id="spinnerShow" class="spinner_sec container text-center">
+            <div class="spinner my-5">
+                <img src="img/loading-spinner.gif" alt="">
+            </div>
+        </section>
+
+
+         <!-- Modal UI Show  -->
+         <section  id="modal_show" class="ui_area container w-75 my-5">
+            
         </section>
 
         <!-- UI Section OR Display Section  -->
@@ -48,10 +62,7 @@
 
         </section>
 
-
-
-
-
+       
 
         <!-- Error Section  -->
         <section class="my-5 error_Section text-center">
