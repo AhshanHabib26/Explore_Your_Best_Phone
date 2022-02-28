@@ -69,10 +69,10 @@ const showDetailsInfo = info => {
     modalShow.innerHTML = `
     <div class="card mb-3"  >
         <div class="row g-0 p-3">
-            <div class="col-md-4 col-lg-4">
+            <div class=" col-sm-6 col-md-4 col-lg-4">
                 <img src="${info.image}" class="img-fluid rounded-start" alt="...">
                   </div>
-                  <div class="col-md-8 col-lg-6">
+                  <div class="col-sm-6 col-md-8 col-lg-8">
                     <div class="card-body">
                       <h5 class="card-title">Mobile Name: ${info.name}</h5>
                       <p class="card-text">Release Date : ${info.releaseDate ? info.releaseDate : 'Relase Date Not Found'}</p>
