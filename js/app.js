@@ -25,6 +25,9 @@ const inputBtn = () =>{
     }
 }
 
+
+
+
 // Fetch And Data UI Show Functionality Start Here
 
 const showResults = mobiles => {
@@ -60,6 +63,10 @@ const showResults = mobiles => {
     }
 }
 
+
+
+
+
 // Show Details Button Fetch And Data Load Start Here 
 
 const showDetails = (info) => {
@@ -68,6 +75,8 @@ const showDetails = (info) => {
    .then( res => res.json())
    .then( rec => showDetailsInfo(rec.data))
 }
+
+
 const showDetailsInfo = info => {
     const modalShow = document.getElementById('modal_show')
     modalShow.innerHTML = `
@@ -114,7 +123,9 @@ const showDetailsInfo = info => {
 
 
 
-// Erro Handeling Function 
+
+
+// Error Handeling Function 
 const inputValueShow = (idname, condition) =>{
     const inputMsg = document.getElementById(idname)
     inputMsg.style.display = condition
