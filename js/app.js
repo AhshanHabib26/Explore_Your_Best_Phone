@@ -1,3 +1,5 @@
+
+// Search Input Functionality Start Here
 const inputBtn = () =>{
     inputValueShow('spinnerShow', 'block')
     const inputArea = document.getElementById('input_area')
@@ -23,6 +25,7 @@ const inputBtn = () =>{
     }
 }
 
+// Fetch And Data UI Show Functionality Start Here
 
 const showResults = mobiles => {
     const showInfo = document.getElementById('show_info')
@@ -57,6 +60,7 @@ const showResults = mobiles => {
     }
 }
 
+// Show Details Button Fetch And Data Load Start Here 
 
 const showDetails = (info) => {
    const fetchId = `https://openapi.programming-hero.com/api/phone/${info}`
