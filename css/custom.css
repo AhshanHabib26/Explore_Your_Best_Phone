@@ -1,3 +1,12 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+
+/* Erro Custom Style  */
+.input_error{
+    display: none;
+}
+.nofind_error{
+    color: #ff6347;
+    display: none;
+}
