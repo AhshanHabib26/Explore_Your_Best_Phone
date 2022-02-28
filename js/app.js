@@ -7,9 +7,11 @@ const inputBtn = () =>{
         inputValueShow('inputError', 'block')
         inputValueShow('spinnerShow', 'none')
         inputValueShow('notFindError', 'none')
+        document.getElementById('modal_show').innerHTML = ""
     }
     else{
         inputValueShow('inputError', 'none')
+        document.getElementById('modal_show').innerHTML = ""
         const fetchUrl = `https://openapi.programming-hero.com/api/phones?search=${inputValue}`
     
         fetch(fetchUrl)
@@ -25,7 +27,6 @@ const inputBtn = () =>{
 const showResults = mobiles => {
     const showInfo = document.getElementById('show_info')
     showInfo.textContent = ''
-    console.log(mobiles)
     if( mobiles.length == 0){
         inputValueShow('notFindError', 'block')
         inputValueShow('spinnerShow', 'none')
@@ -37,7 +38,7 @@ const showResults = mobiles => {
             const div = document.createElement('div')
             div.classList.add('col')
             div.innerHTML = `
-            <div class="card h-100 p-2 border-1 rounded">
+            <div class="card h-100 p-3 border-1 rounded">
             <img height="350px" src="${mobile.image}" class="card-img-top " alt="...">
             <div class="card-body p-3">
               <h5 class="card-title">Name: ${mobile.phone_name}</h5>
@@ -50,11 +51,10 @@ const showResults = mobiles => {
             `
             showInfo.appendChild(div)
             inputValueShow('spinnerShow', 'none')
+            document.getElementById('modal_show').innerHTML = ""
            
         }
     }
-
-
 }
 
 
@@ -74,7 +74,7 @@ const showDetailsInfo = info => {
                   </div>
                   <div class="col-md-8 col-lg-6">
                     <div class="card-body">
-                      <h5 class="card-title">Name: ${info.name}</h5>
+                      <h5 class="card-title">Mobile Name: ${info.name}</h5>
                       <p class="card-text">Release Date : ${info.releaseDate ? info.releaseDate : 'Relase Date Not Found'}</p>
                       <hr>
                       <p class="card-text">Storage: ${info.mainFeatures.storage}</p>
@@ -99,9 +99,6 @@ const showDetailsInfo = info => {
                             <li class="list-group-item border-0">5. ${info.others.Radio}</li>
                             <li class="list-group-item border-0">6. ${info.others.USB}</li>
                         </ul>
-                        <div class="card-btn text-end">
-                        <a onclick="hideDetails(e)" class="btn btn-primary">Show Details</a>
-                     </div>
                     </div>
                   </div>
                 </div>
@@ -110,12 +107,6 @@ const showDetailsInfo = info => {
     const showInfo = document.getElementById('show_info')
     showInfo.textContent = ''
 }
-
-
-const hideDetails = (e) => {
-    console.log(e)
-}
-
 
 
 
