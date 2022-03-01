@@ -4,6 +4,7 @@ const inputBtn = () =>{
     inputValueShow('spinnerShow', 'block')
     const inputArea = document.getElementById('input_area')
     const inputValue = inputArea.value
+   
 
     if(inputValue == ''){
         inputValueShow('inputError', 'block')
@@ -64,9 +65,6 @@ const showResults = mobiles => {
 }
 
 
-
-
-
 // Show Details Button Fetch And Data Load Start Here 
 
 const showDetails = (info) => {
@@ -78,6 +76,7 @@ const showDetails = (info) => {
 
 
 const showDetailsInfo = info => {
+    console.log(info)
     const modalShow = document.getElementById('modal_show')
     modalShow.innerHTML = `
     <div class="card mb-3"  >
@@ -105,12 +104,12 @@ const showDetailsInfo = info => {
                         </ul>
                     <ul class="list-group">
                       <h5 class="card-title">Others</h5>
-                            <li class="list-group-item border-0">1. ${info.others.WLAN}</li>
-                            <li class="list-group-item border-0">2. ${info.others.Bluetooth}</li>
-                            <li class="list-group-item border-0">3. ${info.others.GPS}</li>
-                            <li class="list-group-item border-0">4. ${info.others.NFC}</li>
-                            <li class="list-group-item border-0">5. ${info.others.Radio}</li>
-                            <li class="list-group-item border-0">6. ${info.others.USB}</li>
+                            <li class="list-group-item border-0">1. WLAN: ${info.others?.WLAN ? info.others?.WLAN : 'No' }</li>
+                            <li class="list-group-item border-0">2. Blutooth: ${info.others?.Bluetooth ? info.others?.Bluetooth : 'No' }</li>
+                            <li class="list-group-item border-0">3. GPS: ${info.others?.GPS ? info.others?.GPS : 'No'}</li>
+                            <li class="list-group-item border-0">4. NFC: ${info.others?.NFC ? info.others?.NFC : 'No'}</li>
+                            <li class="list-group-item border-0">5. Radio: ${info.others?.Radio ? info.others?.Radio : 'No'}</li>
+                            <li class="list-group-item border-0">6. USB: ${info.others?.USB ? info.others?.USB : 'No'}</li>
                         </ul>
                     </div>
                   </div>
